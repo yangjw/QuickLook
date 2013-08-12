@@ -18,6 +18,8 @@
 		93A32F1F17B8A99B00414061 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A32F1E17B8A99B00414061 /* Default-568h@2x.png */; };
 		93A32F2217B8A99B00414061 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A32F2117B8A99B00414061 /* ViewController.m */; };
 		93A32F2517B8A99B00414061 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A32F2317B8A99B00414061 /* ViewController.xib */; };
+		93A32F2C17B8A9AC00414061 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A32F2B17B8A9AC00414061 /* QuickLook.framework */; };
+		93A32F3117B8C0C700414061 /* click.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A32F3017B8C0C700414061 /* click.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		93A32F2017B8A99B00414061 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		93A32F2117B8A99B00414061 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		93A32F2417B8A99B00414061 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		93A32F2B17B8A9AC00414061 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		93A32F3017B8C0C700414061 /* click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = click.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A32F2C17B8A9AC00414061 /* QuickLook.framework in Frameworks */,
 				93A32F0917B8A99A00414061 /* UIKit.framework in Frameworks */,
 				93A32F0B17B8A99A00414061 /* Foundation.framework in Frameworks */,
 				93A32F0D17B8A99A00414061 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +61,7 @@
 		93A32EFC17B8A99A00414061 = {
 			isa = PBXGroup;
 			children = (
+				93A32F2B17B8A9AC00414061 /* QuickLook.framework */,
 				93A32F0E17B8A99A00414061 /* QuickLookDemo */,
 				93A32F0717B8A99A00414061 /* Frameworks */,
 				93A32F0617B8A99A00414061 /* Products */,
@@ -88,6 +94,7 @@
 				93A32F2017B8A99B00414061 /* ViewController.h */,
 				93A32F2117B8A99B00414061 /* ViewController.m */,
 				93A32F2317B8A99B00414061 /* ViewController.xib */,
+				93A32F3017B8C0C700414061 /* click.png */,
 				93A32F0F17B8A99A00414061 /* Supporting Files */,
 			);
 			path = QuickLookDemo;
@@ -163,6 +170,7 @@
 				93A32F1D17B8A99B00414061 /* Default@2x.png in Resources */,
 				93A32F1F17B8A99B00414061 /* Default-568h@2x.png in Resources */,
 				93A32F2517B8A99B00414061 /* ViewController.xib in Resources */,
+				93A32F3117B8C0C700414061 /* click.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickLookDemo/QuickLookDemo-Prefix.pch";
 				INFOPLIST_FILE = "QuickLookDemo/QuickLookDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,6 +281,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickLookDemo/QuickLookDemo-Prefix.pch";
 				INFOPLIST_FILE = "QuickLookDemo/QuickLookDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
