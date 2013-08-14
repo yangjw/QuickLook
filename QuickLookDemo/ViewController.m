@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QuickLookVC.h"
 
 @interface ViewController ()
 {
@@ -99,7 +100,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellName];
 	if (cell == nil)
 	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellName];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellName];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	
@@ -131,6 +132,11 @@
 	return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 58;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return [self.dirArray count];
@@ -139,15 +145,33 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	QLPreviewController *previewController = [[QLPreviewController alloc] init];
-    previewController.dataSource = self;
-    previewController.delegate = self;
-
+	
+//	QLPreviewController *previewController = [[QLPreviewController alloc] init];
+//    previewController.dataSource = self;
+//    previewController.delegate = self;
+	
+//	UINavigationController	*navigationController = [[[UINavigationController alloc]initWithRootViewController:previewController] autorelease];
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(closeQuickLookAction:)];
+//    navigationController.navigationItem.leftBarButtonItem = backButton;
+	
     // start previewing the document at the current section index
-    previewController.currentPreviewItemIndex = indexPath.row;
-    [[self navigationController] pushViewController:previewController animated:YES];
+//    previewController.currentPreviewItemIndex = indexPath.row;
+	
+//	[self.view addSubview:previewController.view];
+	
+//    [[self navigationController] pushViewController:previewController animated:YES];
 //	[self presentViewController:previewController animated:YES completion:nil];
+	
+	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentDir = [documentPaths objectAtIndex:0];
+	NSString *path = [documentDir stringByAppendingPathComponent:[self.dirArray objectAtIndex:indexPath.row]];
+	QuickLookVC *qu = [[QuickLookVC alloc] initWithNibName:@"QuickLookVC" bundle:nil];
+	qu.path = path;
+	self.navigationController.navigationBarHidden = YES;
+	[self.navigationController pushViewController:qu animated:YES];
 }
+
+
 
 
 
@@ -186,7 +210,17 @@
 - (id)previewController:(QLPreviewController *)previewController previewItemAtIndex:(NSInteger)idx
 {
 	[previewController.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"click.png"] forBarMetrics:UIBarMetricsDefault];
-		
+//	previewController.navigationItem.hidesBackButton  = YES;
+	previewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(callModalList)];
+	//
+//	UIBarButtonItem *callModalViewButton = [[UIBarButtonItem alloc]
+//											initWithTitle:@"经文"
+//											style:UIBarButtonItemStyleBordered
+//											target:self
+//											action:@selector(callModalList)];
+//	previewController.navigationController.navigationItem.leftBarButtonItem = callModalViewButton;
+//	[callModalViewButton release]; //由于本地视图会retain它，所以我们可以release了
+	
     NSURL *fileURL = nil;
     NSIndexPath *selectedIndexPath = [readTable indexPathForSelectedRow];
 	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -196,7 +230,10 @@
     return fileURL;
 }
 
-
+- (void)callModalList
+{
+	NSLog(@"---------------");
+}
 
 - (void)didReceiveMemoryWarning
 {

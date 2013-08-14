@@ -20,6 +20,9 @@
 		93A32F2517B8A99B00414061 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A32F2317B8A99B00414061 /* ViewController.xib */; };
 		93A32F2C17B8A9AC00414061 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A32F2B17B8A9AC00414061 /* QuickLook.framework */; };
 		93A32F3117B8C0C700414061 /* click.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A32F3017B8C0C700414061 /* click.png */; };
+		93B56C6617BB5AC300B9F6BA /* QuickLookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B56C6417BB5AC300B9F6BA /* QuickLookVC.m */; };
+		93B56C6717BB5AC300B9F6BA /* QuickLookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93B56C6517BB5AC300B9F6BA /* QuickLookVC.xib */; };
+		93B56C6E17BB606600B9F6BA /* icon_scan_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 93B56C6D17BB606600B9F6BA /* icon_scan_back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,10 @@
 		93A32F2417B8A99B00414061 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		93A32F2B17B8A9AC00414061 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		93A32F3017B8C0C700414061 /* click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = click.png; sourceTree = "<group>"; };
+		93B56C6317BB5AC300B9F6BA /* QuickLookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLookVC.h; sourceTree = "<group>"; };
+		93B56C6417BB5AC300B9F6BA /* QuickLookVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLookVC.m; sourceTree = "<group>"; };
+		93B56C6517BB5AC300B9F6BA /* QuickLookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickLookVC.xib; sourceTree = "<group>"; };
+		93B56C6D17BB606600B9F6BA /* icon_scan_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_scan_back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +101,12 @@
 				93A32F2017B8A99B00414061 /* ViewController.h */,
 				93A32F2117B8A99B00414061 /* ViewController.m */,
 				93A32F2317B8A99B00414061 /* ViewController.xib */,
+				93B56C6D17BB606600B9F6BA /* icon_scan_back.png */,
 				93A32F3017B8C0C700414061 /* click.png */,
 				93A32F0F17B8A99A00414061 /* Supporting Files */,
+				93B56C6317BB5AC300B9F6BA /* QuickLookVC.h */,
+				93B56C6417BB5AC300B9F6BA /* QuickLookVC.m */,
+				93B56C6517BB5AC300B9F6BA /* QuickLookVC.xib */,
 			);
 			path = QuickLookDemo;
 			sourceTree = "<group>";
@@ -171,6 +182,8 @@
 				93A32F1F17B8A99B00414061 /* Default-568h@2x.png in Resources */,
 				93A32F2517B8A99B00414061 /* ViewController.xib in Resources */,
 				93A32F3117B8C0C700414061 /* click.png in Resources */,
+				93B56C6717BB5AC300B9F6BA /* QuickLookVC.xib in Resources */,
+				93B56C6E17BB606600B9F6BA /* icon_scan_back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +197,7 @@
 				93A32F1517B8A99A00414061 /* main.m in Sources */,
 				93A32F1917B8A99A00414061 /* AppDelegate.m in Sources */,
 				93A32F2217B8A99B00414061 /* ViewController.m in Sources */,
+				93B56C6617BB5AC300B9F6BA /* QuickLookVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +320,7 @@
 				93A32F2A17B8A99B00414061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
